@@ -1,14 +1,19 @@
 #ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#define FT_PRINTF_H
 
-# include <stdarg.h>
-# include <unistd.h>
+#include <stdarg.h>
+#include <unistd.h>
 
-int	ft_printf(const char *format, ...);
-int	ft_putchar(char c);
-int	ft_putstr(char *s);
-int	ft_putnbr_base(unsigned long n, int base, char *chars);
-int	ft_print_signed(long n);
-int	ft_print_ptr(unsigned long ptr);
+/* Ana Fonksiyon */
+int ft_printf(const char *string, ...);
+
+/* Yardımcı (Helper) Fonksiyonlar */
+int ft_putchar(char c);
+int ft_putstr(char *s);
+int ft_put_ptr(void *ptr);
+int ft_putnbr(int n);
+int ft_put_unbr(unsigned int n);
+int ft_put_x(unsigned int n);
+int ft_put_upper_x(unsigned int n);
 
 #endif
